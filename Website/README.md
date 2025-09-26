@@ -27,7 +27,7 @@ The website is developed and maintained by the **`Developer Relations` domain** 
 | Version | Description | Developers |
 |-|-|-|
 | v.2025 | Enhanced during 2025, this version aims at featuring the innovative projects devloped by `Team Blotic` that will be used throughout the campus to make emerging technologies availbale campus-wide. | N/A |
-| v.2024 | Created during the 2024 annual fest Bharatiyam, this version aimed to boost Blotic's digital presence and attract crowds to its events. | [Tejas Gupta](https://github.com/multiverseweb) & [Ayush Dubey](https://github.com/uayushdubey/) |
+| v.2024 | Created during the 2024 annual fest Bharatiyam, this version aimed to boost Blotic's digital presence and attract crowds to its events. | [Tejas Gupta](https://github.com/multiverseweb) |
 
 ---
 
@@ -90,4 +90,5 @@ The repository is organized as follows:
 ## License
 
 This project is licensed under the MIT License.
+
 
