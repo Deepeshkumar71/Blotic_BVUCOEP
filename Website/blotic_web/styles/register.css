@@ -1,0 +1,390 @@
+/* Modern Registration Page Styles */
+
+.registration-section {
+    padding: 120px 0 60px;
+    min-height: 100vh;
+    background: transparent;
+}
+
+.registration-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.registration-form-container {
+    background: rgba(96, 46, 166, 0.05);
+    border: 1px solid rgba(204, 117, 219, 0.2);
+    border-radius: var(--border-radius-large);
+    padding: 3rem;
+    box-shadow: var(--shadow-primary);
+    backdrop-filter: blur(10px);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-logo img {
+    width: 80px;
+    height: 60px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 20px rgba(204, 117, 219, 0.5));
+}
+
+/* Form Grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.form-label i {
+    color: var(--primary-color);
+    width: 20px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: rgba(96, 46, 166, 0.1);
+    border: 1px solid rgba(204, 117, 219, 0.3);
+    border-radius: var(--border-radius-small);
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: var(--transition);
+    font-family: inherit;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 20px rgba(204, 117, 219, 0.3);
+}
+
+.form-input::placeholder {
+    color: var(--text-secondary);
+}
+
+/* Checkbox Grid */
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem;
+    background: rgba(96, 46, 166, 0.1);
+    border: 1px solid rgba(204, 117, 219, 0.2);
+    border-radius: var(--border-radius-small);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.checkbox-item:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.checkbox-item input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-item .checkmark {
+    width: 20px;
+    height: 20px;
+    background: rgba(96, 46, 166, 0.1);
+    border: 1px solid rgba(204, 117, 219, 0.3);
+    border-radius: 4px;
+    position: relative;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.checkbox-item input[type="checkbox"]:checked + .checkmark {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.checkbox-item input[type="checkbox"]:checked + .checkmark::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-text {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.checkbox-item:has(input[type="checkbox"]:checked) .checkbox-text {
+    color: var(--text-primary);
+}
+
+/* Checkbox Container */
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.checkbox-container input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-container .checkmark {
+    width: 20px;
+    height: 20px;
+    background: rgba(96, 46, 166, 0.1);
+    border: 1px solid rgba(204, 117, 219, 0.3);
+    border-radius: 4px;
+    position: relative;
+    transition: var(--transition);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.checkbox-container input[type="checkbox"]:checked + .checkmark {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.checkbox-container input[type="checkbox"]:checked + .checkmark::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox-container .link {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.checkbox-container .link:hover {
+    color: var(--text-primary);
+}
+
+/* Error Messages */
+.error-message {
+    color: #ef4444;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    display: block;
+    min-height: 1.2rem;
+}
+
+/* Register Button */
+.btn-large {
+    width: 100%;
+    padding: 1.2rem 2rem;
+    font-size: 1.1rem;
+    justify-content: center;
+}
+
+.btn-text {
+    transition: var(--transition);
+}
+
+.btn.loading .btn-text {
+    opacity: 0;
+}
+
+.btn.loading .loading {
+    opacity: 1;
+}
+
+/* Form Footer */
+.form-footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--text-secondary);
+}
+
+.login-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.login-link:hover {
+    color: var(--text-primary);
+}
+
+/* Registration Info */
+.registration-info {
+    padding: 2rem;
+}
+
+.info-content {
+    max-width: 500px;
+}
+
+.info-features {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(96, 46, 166, 0.1);
+    border: 1px solid rgba(204, 117, 219, 0.2);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.info-feature:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.info-feature .feature-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(204, 117, 219, 0.1);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.feature-content h4 {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.feature-content p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .registration-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .registration-info {
+        order: -1;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .registration-section {
+        padding: 100px 0 40px;
+    }
+    
+    .registration-form-container {
+        padding: 2rem;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .checkbox-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-features {
+        gap: 1rem;
+    }
+    
+    .info-feature {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .registration-form-container {
+        padding: 1.5rem;
+        border-radius: var(--border-radius);
+    }
+    
+    .form-logo img {
+        width: 60px;
+        height: 45px;
+    }
+    
+    .checkbox-item {
+        padding: 0.8rem;
+    }
+    
+    .info-feature {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .info-feature .feature-icon {
+        align-self: center;
+    }
+}

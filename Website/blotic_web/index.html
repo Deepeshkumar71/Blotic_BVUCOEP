@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOTIC - Blockchain and Lotic Technologies Innovation Community</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/homepage.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="icon" type="image/png" href="images/blotic.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Skip Navigation for Accessibility -->
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+    
+    <header id="nav">
+        <a href="index.html" class="logo-link">
+            <img src="images/blotic.png" alt="BLOTIC logo - Bharati Vidyapeeth Web3 Community" class="logo" id="logo2">
+            <div class="logo-text">
+                <span class="letter">L</span>
+                <span class="letter">O</span>
+                <span class="letter">T</span>
+                <span class="letter">I</span>
+                <span class="letter">C</span>
+            </div>
+        </a>
+        <img src="images/stack.png" alt="Menu toggle button" class="stack" id="show" onclick="showmenu()">
+        <img src="images/stack.png" alt="Close menu button" class="stack" id="hide" onclick="hidemenu()">
+        <nav>
+            <ul class="navbar" id="navbar">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="pages/aboutus.html">About Us</a></li>
+                <li><a href="pages/core.html">Core Team</a></li>
+                <li><a href="pages/events.html">Events</a></li>
+                <li><a href="pages/register.html" class="cta-nav">Register</a></li>
+                <li><a href="pages/login.html" class="auth-nav">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-wrapper">
+                <div class="hero-background"></div>
+                <div class="hero-content">
+                    <div class="hero-logo-area">
+                        <img src="images/blotic.png" alt="BLOTIC Logo" class="hero-logo" id="hero-logo2">
+                        <div class="hero-logo-text">
+                            <span class="letter">L</span>
+                            <span class="letter">O</span>
+                            <span class="letter">T</span>
+                            <span class="letter">I</span>
+                            <span class="letter">C</span>
+                        </div>
+                    </div>
+                    
+                    <h1 class="hero-title">Welcome to <span class="gradient-text">BLOTIC</span></h1>
+                    <h2 class="hero-subtitle">Blockchain and Lotic Technologies Innovation Community</h2>
+                    <h3 class="hero-location">Bharati Vidyapeeth College of Engineering</h3>
+                    
+                    <p class="hero-description">
+                        BLOTIC is BVCOE's premier technical club focused on blockchain technology, Web3, and emerging innovations. 
+                        We empower students with hands-on experience in cutting-edge technologies that are shaping the future of the internet.
+                    </p>
+                    
+                    <div class="button-group">
+                        <a href="pages/register.html" class="btn-primary">
+                            <i class="fas fa-rocket"></i>
+                            <span>Join Our Community</span>
+                        </a>
+                        <a href="pages/aboutus.html" class="btn-secondary">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Learn More</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <h2 class="section-title">Our Impact</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="150">0</div>
+                        <div class="stat-label">Active Members</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="25">0</div>
+                        <div class="stat-label">Events Hosted</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="3">0</div>
+                        <div class="stat-label">Years of Innovation</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="container">
+                <h2 class="section-title">Why Choose BLOTIC?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-cubes"></i>
+                        </div>
+                        <h3 class="feature-title">Blockchain Mastery</h3>
+                        <p class="feature-description">
+                            Learn blockchain fundamentals, smart contracts, and decentralized applications through hands-on projects and real-world case studies.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="feature-title">Web3 Innovation</h3>
+                        <p class="feature-description">
+                            Explore the future of the internet with Web3 technologies, NFTs, DeFi, and the metaverse through cutting-edge workshops and projects.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="feature-title">Community Network</h3>
+                        <p class="feature-description">
+                            Connect with like-minded individuals, industry experts, and potential collaborators in the blockchain and Web3 space.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3 class="feature-title">Competitions & Hackathons</h3>
+                        <p class="feature-description">
+                            Participate in blockchain hackathons, coding competitions, and innovation challenges to showcase your skills and win prizes.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="feature-title">Expert Mentorship</h3>
+                        <p class="feature-description">
+                            Learn from industry professionals, alumni, and faculty members who are actively working in blockchain and Web3 technologies.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="feature-title">Career Opportunities</h3>
+                        <p class="feature-description">
+                            Access exclusive internship opportunities, job placements, and networking events with leading blockchain companies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Timeline Section -->
+        <section class="timeline-section">
+            <div class="container">
+                <h2 class="section-title">Upcoming Events</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">March 2025</div>
+                            <h3 class="timeline-title">Web3 Workshop Series</h3>
+                            <p class="timeline-description">
+                                Master the fundamentals of Web3 development, including smart contracts, decentralized applications, and blockchain integration.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">April 2025</div>
+                            <h3 class="timeline-title">Blockchain Hackathon</h3>
+                            <p class="timeline-description">
+                                Join our annual blockchain hackathon and compete with teams to build innovative solutions using cutting-edge technologies.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">May 2025</div>
+                            <h3 class="timeline-title">Industry Expert Talks</h3>
+                            <p class="timeline-description">
+                                Learn from industry leaders and get insights into the latest trends and opportunities in blockchain and Web3 space.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section brand-section">
+                <div class="footer-logo">
+                    <h3>BLOTIC</h3>
+                    <p>Empowering the next generation of Web3 innovators at Bharati Vidyapeeth College of Engineering</p>
+                </div>
+                <div class="footer-contact">
+                    <p><i class="fas fa-envelope"></i> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bloticbvducoep@gmail.com" target="_blank" style="color: inherit; text-decoration: none;">bloticbvducoep@gmail.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/PRmt1VCg2tH5DcnlwA21JS" target="_blank" style="color: inherit; text-decoration: none;">Bharati Vidyapeeth Campus, Dhankawadi Pune, Maharashtra</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-section links-section">
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/aboutus.html">About Us</a></li>
+                        <li><a href="pages/events.html">Events</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="pages/terms-of-use.html">Terms of Use</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/blotic_bvducoep?igsh=Z25lNWZvNTBmaWN1" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/blotic/posts/?feedView=all" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://chat.whatsapp.com/D1QbpsJZuV1CscnlwA21JS" target="_blank" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 BLOTIC - Bharati Vidyapeeth's Premier Blockchain & Web3 Club. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="scripts/script.js"></script>
+    <script src="scripts/particles.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/index.js"></script>
+</body>
+</html>

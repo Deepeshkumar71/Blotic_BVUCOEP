@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - BLOTIC</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/shared-components.css">
+    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="icon" type="image/png" href="../images/blotic.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Skip Navigation for Accessibility -->
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+    <header id="nav">
+        <a href="../index.html" class="logo-link">
+            <img src="../images/blotic.png" alt="BLOTIC logo - Bharati Vidyapeeth Web3 Community" class="logo" id="logo2">
+            <div class="logo-text">
+                <span class="letter">L</span>
+                <span class="letter">O</span>
+                <span class="letter">T</span>
+                <span class="letter">I</span>
+                <span class="letter">C</span>
+            </div>
+        </a>
+        <img src="../images/stack.png" alt="Menu toggle button" class="stack" id="show" onclick="showmenu()">
+        <img src="../images/stack.png" alt="Close menu button" class="stack" id="hide" onclick="hidemenu()">
+        <nav>
+            <ul class="navbar" id="navbar">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="core.html">Core Team</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="register.html" class="cta-nav">Register</a></li>
+                <li><a href="login.html" class="auth-nav active">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="login-container">
+        <div class="login-wrapper">
+            <div class="login-form-container">
+                <div class="login-header">
+                    <div class="login-logo">
+                        <img src="../images/blotic.png" alt="BLOTIC Logo">
+                        <h1 class="hero-title">Welcome Back</h1>
+                    </div>
+                    <p class="hero-subtitle">Sign in to access your BLOTIC account</p>
+                </div>
+
+                <form class="login-form" id="loginForm">
+                    <div class="form-group">
+                        <label for="email" class="form-label">
+                            <i class="fas fa-envelope"></i>
+                            Email Address
+                        </label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label">
+                            <i class="fas fa-lock"></i>
+                            Password
+                        </label>
+                        <input type="password" id="password" name="password" class="form-input" placeholder="Enter your password" required>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="rememberMe" name="rememberMe">
+                            <span class="checkmark"></span>
+                            Remember me
+                        </label>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large" id="loginBtn">
+                        <span class="btn-text">Sign In</span>
+                        <div class="loading hidden"></div>
+                    </button>
+                </form>
+
+                <div class="login-divider">
+                    <span>or continue with</span>
+                </div>
+
+                <div class="social-login">
+                    <button class="social-btn google-btn" onclick="socialLogin('google')">
+                        <i class="fab fa-google"></i>
+                        <span>Google</span>
+                    </button>
+                    <button class="social-btn github-btn" onclick="socialLogin('github')">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </button>
+                </div>
+
+                <div class="login-footer">
+                    <p>Don't have an account? <a href="register.html" class="register-link">Create Account</a></p>
+                </div>
+            </div>
+
+            <div class="login-info">
+                <div class="info-content">
+                    <h2 class="heading-secondary">Join the Blockchain Revolution</h2>
+                    <p class="text-secondary">
+                        BLOTIC is your gateway to the world of blockchain technology, Web3 development, and decentralized innovation. 
+                        Connect with like-minded individuals and advance your career in the future of technology.
+                    </p>
+                    
+                    <div class="info-features">
+                        <div class="info-feature">
+                            <i class="fas fa-users"></i>
+                            <span>150+ Active Members</span>
+                        </div>
+                        <div class="info-feature">
+                            <i class="fas fa-calendar"></i>
+                            <span>25+ Events Hosted</span>
+                        </div>
+                        <div class="info-feature">
+                            <i class="fas fa-trophy"></i>
+                            <span>3+ Years of Innovation</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="register.html" class="btn btn-secondary">
+                            <i class="fas fa-user-plus"></i>
+                            <span>Join BLOTIC Today</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section brand-section">
+                <div class="footer-logo">
+                    <h3>BLOTIC</h3>
+                    <p>Empowering the next generation of Web3 innovators at Bharati Vidyapeeth College of Engineering</p>
+                </div>
+                <div class="footer-contact">
+                    <p><i class="fas fa-envelope"></i> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bloticbvducoep@gmail.com" target="_blank" style="color: inherit; text-decoration: none;">bloticbvducoep@gmail.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/PRmt1VCg2tH5DcnlwA21JS" target="_blank" style="color: inherit; text-decoration: none;">Bharati Vidyapeeth Campus, Dhankawadi Pune, Maharashtra</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-section links-section">
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-use.html">Terms of Use</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/blotic_bvducoep?igsh=Z25lNWZvNTBmaWN1" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/blotic/posts/?feedView=all" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://chat.whatsapp.com/D1QbpsJZuV1CscnlwA21JS" target="_blank" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 BLOTIC - Bharati Vidyapeeth's Premier Blockchain & Web3 Club. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/particles.js"></script>
+    <script src="../scripts/app.js"></script>
+    <script src="../scripts/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - BLOTIC</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/shared-components.css">
+    <link rel="stylesheet" href="../styles/events.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="icon" type="image/png" href="../images/blotic.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Skip Navigation for Accessibility -->
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+    <header id="nav">
+        <a href="../index.html" class="logo-link">
+            <img src="../images/blotic.png" alt="BLOTIC logo - Bharati Vidyapeeth Web3 Community" class="logo" id="logo2">
+            <div class="logo-text">
+                <span class="letter">L</span>
+                <span class="letter">O</span>
+                <span class="letter">T</span>
+                <span class="letter">I</span>
+                <span class="letter">C</span>
+            </div>
+        </a>
+        <img src="../images/stack.png" alt="Menu toggle button" class="stack" id="show" onclick="showmenu()">
+        <img src="../images/stack.png" alt="Close menu button" class="stack" id="hide" onclick="hidemenu()">
+        <nav>
+            <ul class="navbar" id="navbar">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="core.html">Core Team</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
+                <li><a href="register.html" class="cta-nav">Register</a></li>
+                <li><a href="login.html" class="auth-nav">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Our <span class="gradient-text">Events</span></h1>
+                <p class="hero-subtitle">Discover Our Upcoming Events & Explore Our Legacy</p>
+                <p class="hero-description">
+                    Join us for exciting workshops, hackathons, and networking events designed to advance your blockchain and Web3 knowledge.
+                </p>
+                <div class="mt-4">
+                    <a href="#upcoming-events" class="btn btn-primary">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Upcoming Events</span>
+                    </a>
+                    <a href="#past-events" class="btn btn-secondary">
+                        <i class="fas fa-history"></i>
+                        <span>Past Events</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Events Section -->
+        <section id="upcoming-events" class="section">
+            <div class="container">
+                <h2 class="section-title">Upcoming Events</h2>
+                <div class="grid grid-2">
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="date-day">22</span>
+                            <span class="date-month">Mar</span>
+                        </div>
+                        <div class="event-content">
+                            <div class="event-placeholder">Web3</div>
+                            <h3 class="event-title">Web3 Workshop Series</h3>
+                            <p class="event-tagline">Mastering Smart Contracts & dApps</p>
+                            <div class="event-details">
+                                <p><i class="fas fa-clock"></i> 2:00 PM - 4:00 PM</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Virtual Event</p>
+                                <p><i class="fas fa-users"></i> 50 Participants</p>
+                            </div>
+                            <p class="event-description">
+                                Learn the fundamentals of Web3 development, including smart contracts, decentralized applications, and blockchain integration. Perfect for beginners and intermediate developers.
+                            </p>
+                            <div class="event-actions">
+                                <a href="register.html" class="btn btn-primary btn-small">Register Now</a>
+                                <a href="#" class="btn btn-outline btn-small">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="date-day">15</span>
+                            <span class="date-month">Apr</span>
+                        </div>
+                        <div class="event-content">
+                            <div class="event-placeholder">Blockchain</div>
+                            <h3 class="event-title">Blockchain 101 Workshop</h3>
+                            <p class="event-tagline">Introduction to Blockchain Technology</p>
+                            <div class="event-details">
+                                <p><i class="fas fa-clock"></i> 10:00 AM - 12:00 PM</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Campus Lab</p>
+                                <p><i class="fas fa-users"></i> 30 Participants</p>
+                            </div>
+                            <p class="event-description">
+                                A comprehensive introduction to blockchain technology, covering concepts, applications, and hands-on exercises for beginners.
+                            </p>
+                            <div class="event-actions">
+                                <a href="register.html" class="btn btn-primary btn-small">Register Now</a>
+                                <a href="#" class="btn btn-outline btn-small">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Categories Section -->
+        <section class="section" style="background: rgba(96, 46, 166, 0.05);">
+            <div class="container">
+                <h2 class="section-title">Event Categories</h2>
+                <div class="grid grid-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="feature-title">Workshops</h3>
+                        <p class="feature-description">
+                            Hands-on learning sessions covering blockchain fundamentals, smart contracts, and Web3 development.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3 class="feature-title">Hackathons</h3>
+                        <p class="feature-description">
+                            Competitive coding events where participants build innovative blockchain solutions in teams.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <h3 class="feature-title">Talks & Seminars</h3>
+                        <p class="feature-description">
+                            Expert sessions featuring industry leaders sharing insights on blockchain trends and opportunities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Past Events Timeline -->
+        <section id="past-events" class="section">
+            <div class="container">
+                <h2 class="section-title">Past Events</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">February 2025</div>
+                            <h3 class="timeline-title">Blockchain Workshop Series</h3>
+                            <p class="timeline-description">
+                                Successfully conducted a comprehensive blockchain workshop series with 45 participants learning smart contract development and dApp creation.
+                            </p>
+                            <div class="timeline-stats">
+                                <span class="stat"><i class="fas fa-users"></i> 45 Participants</span>
+                                <span class="stat"><i class="fas fa-clock"></i> 4 Sessions</span>
+                                <span class="stat"><i class="fas fa-star"></i> 4.8/5 Rating</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">January 2025</div>
+                            <h3 class="timeline-title">Web3 Innovation Hackathon</h3>
+                            <p class="timeline-description">
+                                Hosted a 48-hour hackathon with 12 teams competing to build innovative Web3 solutions. Winning project: DeFi Portfolio Manager.
+                            </p>
+                            <div class="timeline-stats">
+                                <span class="stat"><i class="fas fa-users"></i> 36 Participants</span>
+                                <span class="stat"><i class="fas fa-trophy"></i> 12 Teams</span>
+                                <span class="stat"><i class="fas fa-medal"></i> 3 Winners</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">December 2024</div>
+                            <h3 class="timeline-title">Industry Expert Talk</h3>
+                            <p class="timeline-description">
+                                Guest lecture by blockchain industry expert discussing career opportunities and emerging trends in Web3 technology.
+                            </p>
+                            <div class="timeline-stats">
+                                <span class="stat"><i class="fas fa-users"></i> 80 Attendees</span>
+                                <span class="stat"><i class="fas fa-handshake"></i> 5 Networking</span>
+                                <span class="stat"><i class="fas fa-briefcase"></i> 3 Opportunities</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section brand-section">
+                <div class="footer-logo">
+                    <h3>BLOTIC</h3>
+                    <p>Empowering the next generation of Web3 innovators at Bharati Vidyapeeth College of Engineering</p>
+                </div>
+                <div class="footer-contact">
+                    <p><i class="fas fa-envelope"></i> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bloticbvducoep@gmail.com" target="_blank" style="color: inherit; text-decoration: none;">bloticbvducoep@gmail.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/PRmt1VCg2tH5DcnlwA21JS" target="_blank" style="color: inherit; text-decoration: none;">Bharati Vidyapeeth Campus, Dhankawadi Pune, Maharashtra</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-section links-section">
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-use.html">Terms of Use</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/blotic_bvducoep?igsh=Z25lNWZvNTBmaWN1" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/blotic/posts/?feedView=all" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://chat.whatsapp.com/D1QbpsJZuV1CscnlwA21JS" target="_blank" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 BLOTIC - Bharati Vidyapeeth's Premier Blockchain & Web3 Club. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/particles.js"></script>
+    <script src="../scripts/app.js"></script>
+    <script src="../scripts/index.js"></script>
+</body>
+</html>

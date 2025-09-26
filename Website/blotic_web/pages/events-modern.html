@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - BLOTIC</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/events-modern.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="icon" type="image/png" href="../images/blotic.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <header id="nav">
+        <img src="../images/blotic.png" alt="BLOTIC logo - Bharati Vidyapeeth Web3 Community" class="logo" id="logo2">
+        <img src="../images/blotic.png" alt="BLOTIC logo - Bharati Vidyapeeth Web3 Community" class="logo">
+        <div class="logo-text">LOTIC</div>
+        <img src="../images/stack.png" alt="Menu toggle button" class="stack" id="show" onclick="showmenu()">
+        <img src="../images/stack.png" alt="Close menu button" class="stack" id="hide" onclick="hidemenu()">
+        <nav>
+            <ul class="navbar" id="navbar">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
+                <li><a href="register.html" class="cta-nav">Register</a></li>
+                <li><a href="login.html" class="auth-nav">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main id="main-content" class="main-container">
+        <!-- Modern Hero Section with Animated Background -->
+        <section class="events-hero-modern">
+            <div class="hero-overlay-modern">
+                <div class="hero-content-modern">
+                    <h1 class="hero-title-modern">Our Events</h1>
+                    <p class="hero-subtitle-modern">Discover our upcoming events and explore our legacy of successful past events</p>
+                    <div class="hero-cta-modern">
+                        <a href="#upcoming-events" class="btn-modern primary">View Upcoming Events</a>
+                        <a href="#past-events" class="btn-modern secondary">Explore Past Events</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Animated Elements -->
+            <div class="hero-animations">
+                <div class="floating-element element-1"></div>
+                <div class="floating-element element-2"></div>
+                <div class="floating-element element-3"></div>
+                <div class="floating-element element-4"></div>
+            </div>
+        </section>
+
+        <!-- Upcoming Events Section (Conversion-focused) -->
+        <section class="upcoming-events-section-modern" id="upcoming-events">
+            <div class="container-modern">
+                <div class="section-header-modern">
+                    <h2 class="section-title-modern">Upcoming Events</h2>
+                    <p class="section-subtitle-modern">Join us for exciting upcoming events and workshops</p>
+                </div>
+                
+                <div class="events-grid-modern">
+                    <!-- Event 1 -->
+                    <div class="event-card-modern upcoming-modern">
+                        <div class="event-date-modern">
+                            <span class="day-modern">15</span>
+                            <span class="month-modern">MAR</span>
+                            <span class="year-modern">2025</span>
+                        </div>
+                        <div class="event-content-modern">
+                            <div class="event-badge-modern">Featured</div>
+                            <h3 class="event-title-modern">BlotVerse 2025</h3>
+                            <p class="event-tagline-modern">India's Premier Blockchain & Web3 Festival</p>
+                            <div class="event-details-modern">
+                                <p><i class="fas fa-clock"></i> 10:00 AM - 5:00 PM</p>
+                                <p><i class="fas fa-map-marker-alt"></i> BVCOE Campus, Pune</p>
+                            </div>
+                            <p class="event-description-modern">
+                                Experience the future of blockchain technology with workshops, expert talks, and hands-on sessions. Connect with industry leaders and explore career opportunities in the Web3 space.
+                            </p>
+                            <div class="event-highlights-modern">
+                                <h4>Featured Speakers:</h4>
+                                <ul>
+                                    <li>Dr. Namita Shinde - Blockchain Innovations</li>
+                                    <li>Deepesh - Developer Relations</li>
+                                    <li>Special Industry Guests</li>
+                                </ul>
+                            </div>
+                            <a href="register.html" class="btn-modern primary">Register Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Event 2 -->
+                    <div class="event-card-modern upcoming-modern">
+                        <div class="event-date-modern">
+                            <span class="day-modern">22</span>
+                            <span class="month-modern">MAR</span>
+                            <span class="year-modern">2025</span>
+                        </div>
+                        <div class="event-content-modern">
+                            <h3 class="event-title-modern">Web3 Workshop Series</h3>
+                            <p class="event-tagline-modern">Mastering Smart Contracts</p>
+                            <div class="event-details-modern">
+                                <p><i class="fas fa-clock"></i> 2:00 PM - 4:00 PM</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Virtual Event</p>
+                            </div>
+                            <p class="event-description-modern">
+                                Dive deep into smart contract development with hands-on coding sessions. Perfect for beginners and intermediate developers looking to enhance their skills.
+                            </p>
+                            <div class="event-highlights-modern">
+                                <h4>What You'll Learn:</h4>
+                                <ul>
+                                    <li>Solidity basics and best practices</li>
+                                    <li>Contract deployment on test networks</li>
+                                    <li>Security vulnerabilities and prevention</li>
+                                    <li>Real-world contract examples</li>
+                                </ul>
+                            </div>
+                            <a href="register.html" class="btn-modern primary">Register Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Event 3 -->
+                    <div class="event-card-modern upcoming-modern">
+                        <div class="event-date-modern">
+                            <span class="day-modern">30</span>
+                            <span class="month-modern">MAR</span>
+                            <span class="year-modern">2025</span>
+                        </div>
+                        <div class="event-content-modern">
+                            <h3 class="event-title-modern">NFT Creation Masterclass</h3>
+                            <p class="event-tagline-modern">From Concept to Marketplace</p>
+                            <div class="event-details-modern">
+                                <p><i class="fas fa-clock"></i> 11:00 AM - 1:00 PM</p>
+                                <p><i class="fas fa-map-marker-alt"></i> BVCOE Lab 301</p>
+                            </div>
+                            <p class="event-description-modern">
+                                Learn to create and mint your own NFTs in this hands-on workshop. Discover the creative and technical aspects of NFT development and marketplace strategies.
+                            </p>
+                            <div class="event-highlights-modern">
+                                <h4>Key Topics:</h4>
+                                <ul>
+                                    <li>Digital art creation techniques</li>
+                                    <li>Smart contract integration</li>
+                                    <li>Minting process and gas optimization</li>
+                                    <li>Marketplace listing strategies</li>
+                                </ul>
+                            </div>
+                            <a href="register.html" class="btn-modern primary">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Previous Events Section (Trust-building) -->
+        <section class="previous-events-section-modern" id="past-events">
+            <div class="container-modern">
+                <div class="section-header-modern">
+                    <h2 class="section-title-modern">Previous Events</h2>
+                    <p class="section-subtitle-modern">Relive our successful past events and see what we've accomplished</p>
+                </div>
+                
+                <div class="events-grid-modern">
+                    <!-- Previous Event 1 -->
+                    <div class="event-card-modern previous-modern">
+                        <div class="event-date-modern">
+                            <span class="day-modern">18</span>
+                            <span class="month-modern">FEB</span>
+                            <span class="year-modern">2024</span>
+                        </div>
+                        <div class="event-content-modern">
+                            <h3 class="event-title-modern">Blockchain 101 Workshop</h3>
+                            <p class="event-date-info-modern"><i class="fas fa-calendar"></i> February 18, 2024</p>
+                            <p class="event-summary-modern">
+                                Our introductory workshop on blockchain technology attracted over 150 participants and received excellent feedback. This foundational event helped many students understand core blockchain concepts.
+                            </p>
+                            <div class="event-gallery-modern">
+                                <div class="gallery-grid-modern">
+                                    <div class="gallery-item-modern">
+                                        <div class="event-placeholder">Blockchain</div>
+                                    </div>
+                                    <div class="gallery-item-modern">
+                                        <div class="event-placeholder">Web3</div>
+                                    </div>
+                                    <div class="gallery-item-modern">
+                                        <div class="event-placeholder">Bitcoin</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-outcomes-modern">
+                                <h4>Key Outcomes:</h4>
+                                <ul>
+                                    <li>85% participant satisfaction rate</li>
+                                    <li>40 new BLOTIC members joined</li>
+                                    <li>3 follow-up advanced workshops scheduled</li>
+                                    <li>Launched student blockchain project teams</li>
+                                </ul>
+                            </div>
+                            <div class="event-partners-modern">
+                                <h4>Partners:</h4>
+                                <div class="partners-list-modern">
+                                    <span class="partner-modern">BVCOE</span>
+                                    <span class="partner-modern">IEEE Student Branch</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Previous Event 2 -->
+                    <div class="event-card-modern previous-modern">
+                        <div class="event-date-modern">
+                            <span class="day-modern">10</span>
+                            <span class="month-modern">DEC</span>
+                            <span class="year-modern">2023</span>
+                        </div>
+                        <div class="event-content-modern">
+                            <h3 class="event-title-modern">Cryptocurrency Trading Seminar</h3>
+                            <p class="event-date-info-modern"><i class="fas fa-calendar"></i> December 10, 2023</p>
+                            <p class="event-summary-modern">
+                                Expert-led seminar on cryptocurrency trading strategies and market analysis. Participants gained practical insights into market dynamics and risk management in the crypto space.
+                            </p>
+                            <div class="event-gallery-modern">
+                                <div class="gallery-grid-modern">
+                                    <div class="gallery-item-modern">
+                                        <img src="../images/blotic.png" alt="Crypto Trading Seminar 1">
+                                    </div>
+                                    <div class="gallery-item-modern">
+                                        <div class="event-placeholder">Blockchain</div>
+                                    </div>
+                                    <div class="gallery-item-modern">
+                                        <div class="event-placeholder">Trading</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-outcomes-modern">
+                                <h4>Key Outcomes:</h4>
+                                <ul>
+                                    <li>120+ attendees from across India</li>
+                                    <li>Featured in local tech magazine</li>
+                                    <li>Launched student trading club</li>
+                                    <li>3 internship opportunities provided</li>
+                                </ul>
+                            </div>
+                            <div class="event-partners-modern">
+                                <h4>Partners:</h4>
+                                <div class="partners-list-modern">
+                                    <span class="partner-modern">BVCOE</span>
+                                    <span class="partner-modern">CoinMarketCap</span>
+                                    <span class="partner-modern">LocalCrypto Exchange</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Previous Event 3 -->
+                    <div class="event-card-modern previous-modern">
+                        <div class="event-date-modern">
+                            <span class="day-modern">05</span>
+                            <span class="month-modern">NOV</span>
+                            <span class="year-modern">2023</span>
+                        </div>
+                        <div class="event-content-modern">
+                            <h3 class="event-title-modern">Web3 Hackathon</h3>
+                            <p class="event-date-info-modern"><i class="fas fa-calendar"></i> November 5, 2023</p>
+                            <p class="event-summary-modern">
+                                24-hour hackathon focused on building decentralized applications with amazing projects showcased. Developers collaborated to create innovative solutions in the Web3 ecosystem.
+                            </p>
+                            <div class="event-gallery-modern">
+                                <div class="gallery-grid-modern">
+                                    <div class="gallery-item-modern">
+                                        <div class="event-placeholder">Hackathon</div>
+                                    </div>
+                                    <div class="gallery-item-modern">
+                                        <div class="event-placeholder">Web3</div>
+                                    </div>
+                                    <div class="gallery-item-modern">
+                                        <img src="../images/Deepesh.jpeg" alt="Web3 Hackathon 3">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-outcomes-modern">
+                                <h4>Key Outcomes:</h4>
+                                <ul>
+                                    <li>35 teams participated from 5 colleges</li>
+                                    <li>₹50,000 in prizes awarded</li>
+                                    <li>2 projects received incubation offers</li>
+                                    <li>5 teams continued development post-event</li>
+                                </ul>
+                            </div>
+                            <div class="event-partners-modern">
+                                <h4>Partners:</h4>
+                                <div class="partners-list-modern">
+                                    <span class="partner-modern">BVCOE</span>
+                                    <span class="partner-modern">Ethereum Foundation</span>
+                                    <span class="partner-modern">Polygon</span>
+                                    <span class="partner-modern">Chainlink</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section brand-section">
+                <div class="footer-logo">
+                    <h3>BLOTIC</h3>
+                    <p>Empowering the next generation of Web3 innovators at Bharati Vidyapeeth College of Engineering</p>
+                </div>
+                <div class="footer-contact">
+                    <p><i class="fas fa-envelope"></i> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bloticbvducoep@gmail.com" target="_blank" style="color: inherit; text-decoration: none;">bloticbvducoep@gmail.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/PRmt1VCg2tH5DcPEA" target="_blank" style="color: inherit; text-decoration: none;">Bharati Vidyapeeth Campus, Dhankawadi Pune, Maharashtra</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-section links-section">
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-use.html">Terms of Use</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/blotic_bvducoep?igsh=Z25lNWZvNTBmaWN1" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/blotic/posts/?feedView=all" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://chat.whatsapp.com/D1QbpsJZuV1CscnlwA21JS" target="_blank" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 BLOTIC - Bharati Vidyapeeth's Premier Blockchain & Web3 Club. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/particles.js"></script>
+    <script src="../scripts/app.js"></script>
+</body>
+</html>

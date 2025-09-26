@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - BLOTIC</title>
+    <meta name="description" content="Join BLOTIC - Register for BVCOEP's premier technical club focused on blockchain, Web3, and emerging technologies.">
+    <meta name="keywords" content="BLOTIC registration, join BLOTIC, BVCOE club registration, blockchain club, tech club signup">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Register | BLOTIC Registration">
+    <meta property="og:description" content="Register to join BLOTIC - BVCOEP's premier technical club for emerging technologies.">
+    <meta property="og:image" content="../images/blotic.png">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/shared-components.css">
+    <link rel="stylesheet" href="../styles/register.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="icon" type="image/png" href="../images/blotic.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Skip Navigation for Accessibility -->
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+    <header id="nav">
+        <a href="../index.html" class="logo-link">
+            <img src="../images/blotic.png" alt="BLOTIC logo - Bharati Vidyapeeth Web3 Community" class="logo" id="logo2">
+            <div class="logo-text">
+                <span class="letter">L</span>
+                <span class="letter">O</span>
+                <span class="letter">T</span>
+                <span class="letter">I</span>
+                <span class="letter">C</span>
+            </div>
+        </a>
+        <img src="../images/stack.png" alt="Menu toggle button" class="stack" id="show" onclick="showmenu()">
+        <img src="../images/stack.png" alt="Close menu button" class="stack" id="hide" onclick="hidemenu()">
+        <nav>
+            <ul class="navbar" id="navbar">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="core.html">Core Team</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="register.html" class="cta-nav active">Register</a></li>
+                <li><a href="login.html" class="auth-nav">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="registration-section">
+            <div class="container">
+                <div class="registration-wrapper">
+                    <div class="registration-form-container">
+                        <div class="form-header">
+                            <div class="form-logo">
+                                <img src="../images/blotic.png" alt="BLOTIC Logo">
+                                <h1 class="hero-title">Join <span class="gradient-text">BLOTIC</span></h1>
+                            </div>
+                            <p class="hero-subtitle">Become part of the blockchain revolution</p>
+                        </div>
+
+                        <form id="registrationForm" class="registration-form">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="fullName" class="form-label">
+                                        <i class="fas fa-user"></i>
+                                        Full Name *
+                                    </label>
+                                    <input type="text" id="fullName" name="fullName" class="form-input" required placeholder="Enter your full name">
+                                    <span class="error-message" id="fullNameError"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email" class="form-label">
+                                        <i class="fas fa-envelope"></i>
+                                        Email Address *
+                                    </label>
+                                    <input type="email" id="email" name="email" class="form-input" required placeholder="Enter your email address">
+                                    <span class="error-message" id="emailError"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">
+                                        <i class="fas fa-phone"></i>
+                                        Phone Number *
+                                    </label>
+                                    <input type="tel" id="phone" name="phone" class="form-input" required placeholder="Enter your phone number">
+                                    <span class="error-message" id="phoneError"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password" class="form-label">
+                                        <i class="fas fa-lock"></i>
+                                        Password *
+                                    </label>
+                                    <input type="password" id="password" name="password" class="form-input" required placeholder="Create a strong password">
+                                    <span class="error-message" id="passwordError"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="branch" class="form-label">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        Branch / Department *
+                                    </label>
+                                    <select id="branch" name="branch" class="form-input form-select" required>
+                                        <option value="">Select Branch</option>
+                                        <option value="CSE">Computer Science & Engineering</option>
+                                        <option value="CSBS">Computer Science & Business Systems</option>
+                                        <option value="CE">Computer Engineering</option>
+                                        <option value="IT">Information Technology</option>
+                                        <option value="ECE">Electronics & Communication</option>
+                                        <option value="E&TC">Electronics & Telecommunication</option>
+                                        <option value="MECHANICAL">Mechanical Engineering</option>
+                                        <option value="CHEMICAL">Chemical Engineering</option>
+                                        <option value="CIVIL">Civil Engineering</option>
+                                        <option value="OTHER">Other</option>
+                                    </select>
+                                    <span class="error-message" id="branchError"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="year" class="form-label">
+                                        <i class="fas fa-calendar"></i>
+                                        Academic Year *
+                                    </label>
+                                    <select id="year" name="year" class="form-input form-select" required>
+                                        <option value="">Select Year</option>
+                                        <option value="1">First Year</option>
+                                        <option value="2">Second Year</option>
+                                        <option value="3">Third Year</option>
+                                        <option value="4">Fourth Year</option>
+                                        <option value="5">Fifth Year (if applicable)</option>
+                                    </select>
+                                    <span class="error-message" id="yearError"></span>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label class="form-label">
+                                        <i class="fas fa-cogs"></i>
+                                        Areas of Interest *
+                                    </label>
+                                    <div class="checkbox-grid">
+                                        <label class="checkbox-item">
+                                            <input type="checkbox" name="domains" value="Blockchain Development">
+                                            <span class="checkmark"></span>
+                                            <span class="checkbox-text">Blockchain Development</span>
+                                        </label>
+                                        <label class="checkbox-item">
+                                            <input type="checkbox" name="domains" value="Smart Contracts">
+                                            <span class="checkmark"></span>
+                                            <span class="checkbox-text">Smart Contracts</span>
+                                        </label>
+                                        <label class="checkbox-item">
+                                            <input type="checkbox" name="domains" value="Web3 Development">
+                                            <span class="checkmark"></span>
+                                            <span class="checkbox-text">Web3 Development</span>
+                                        </label>
+                                        <label class="checkbox-item">
+                                            <input type="checkbox" name="domains" value="DeFi">
+                                            <span class="checkmark"></span>
+                                            <span class="checkbox-text">DeFi (Decentralized Finance)</span>
+                                        </label>
+                                        <label class="checkbox-item">
+                                            <input type="checkbox" name="domains" value="NFTs">
+                                            <span class="checkmark"></span>
+                                            <span class="checkbox-text">NFTs & Digital Assets</span>
+                                        </label>
+                                        <label class="checkbox-item">
+                                            <input type="checkbox" name="domains" value="Cryptocurrency">
+                                            <span class="checkmark"></span>
+                                            <span class="checkbox-text">Cryptocurrency</span>
+                                        </label>
+                                    </div>
+                                    <span class="error-message" id="domainsError"></span>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                                        <span class="checkmark"></span>
+                                        I agree to the <a href="terms-of-use.html" target="_blank" class="link">Terms of Use</a> and <a href="privacy-policy.html" target="_blank" class="link">Privacy Policy</a> *
+                                    </label>
+                                    <span class="error-message" id="agreeTermsError"></span>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-large" id="registerBtn">
+                                <span class="btn-text">Join BLOTIC</span>
+                                <div class="loading hidden"></div>
+                            </button>
+                        </form>
+
+                        <div class="form-footer">
+                            <p>Already have an account? <a href="login.html" class="login-link">Sign In</a></p>
+                        </div>
+                    </div>
+
+                    <div class="registration-info">
+                        <div class="info-content">
+                            <h2 class="heading-secondary">Why Join BLOTIC?</h2>
+                            <p class="text-secondary">
+                                BLOTIC is more than just a technical club - it's a community of innovators, developers, and blockchain enthusiasts working together to shape the future of technology.
+                            </p>
+                            
+                            <div class="info-features">
+                                <div class="info-feature">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h4>Hands-on Learning</h4>
+                                        <p>Practical workshops and projects in blockchain and Web3 technologies</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="info-feature">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h4>Expert Community</h4>
+                                        <p>Connect with industry professionals and like-minded peers</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="info-feature">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-trophy"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h4>Competitions</h4>
+                                        <p>Participate in hackathons and coding competitions</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="info-feature">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h4>Career Growth</h4>
+                                        <p>Access to internships and job opportunities in blockchain companies</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section brand-section">
+                <div class="footer-logo">
+                    <h3>BLOTIC</h3>
+                    <p>Empowering the next generation of Web3 innovators at Bharati Vidyapeeth College of Engineering</p>
+                </div>
+                <div class="footer-contact">
+                    <p><i class="fas fa-envelope"></i> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bloticbvducoep@gmail.com" target="_blank" style="color: inherit; text-decoration: none;">bloticbvducoep@gmail.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/PRmt1VCg2tH5DcnlwA21JS" target="_blank" style="color: inherit; text-decoration: none;">Bharati Vidyapeeth Campus, Dhankawadi Pune, Maharashtra</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-section links-section">
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-use.html">Terms of Use</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/blotic_bvducoep?igsh=Z25lNWZvNTBmaWN1" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/blotic/posts/?feedView=all" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://chat.whatsapp.com/D1QbpsJZuV1CscnlwA21JS" target="_blank" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 BLOTIC - Bharati Vidyapeeth's Premier Blockchain & Web3 Club. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/particles.js"></script>
+    <script src="../scripts/app.js"></script>
+    <script src="../scripts/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - BLOTIC Club</title>
+    <meta name="description" content="Join BLOTIC - Register for BVUCOEP's premier technical club focused on blockchain, AI, robotics, and emerging technologies.">
+    <meta name="keywords" content="BLOTIC registration, join BLOTIC, BVCOE club registration, blockchain club, tech club signup">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Register | BLOTIC Registration">
+    <meta property="og:description" content="Register to join BLOTIC - BVUCOEP's premier technical club for emerging technologies.">
+    <meta property="og:image" content="../images/blotic.png">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/register.css">
+    <link rel="stylesheet" href="../styles/Stepper.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="icon" type="image/png" href="../images/blotic.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <header id="nav">
+        <img src="../images/blotic.png" alt="BLOTIC logo - Bharati Vidyapeeth Web3 Community" class="logo" id="logo2">
+        <img src="../images/blotic.png" alt="BLOTIC logo - Bharati Vidyapeeth Web3 Community" class="logo">
+        <div class="logo-text">LOTIC</div>
+        <img src="../images/stack.png" alt="Menu toggle button" class="stack" id="show" onclick="showmenu()">
+        <img src="../images/stack.png" alt="Close menu button" class="stack" id="hide" onclick="hidemenu()">
+        <nav>
+            <ul class="navbar" id="navbar">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="register.html" class="active">Register</a></li>
+                <li><a href="login.html" class="auth-nav">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="registration-form-section">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h1>Join BLOTIC</h1>
+                        <p>Fill in your details to become part of our community</p>
+                    </div>
+
+                    <div id="stepper-container">
+                        <!-- Stepper will be rendered here by React -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section brand-section">
+                <div class="footer-logo">
+                    <h3>BLOTIC</h3>
+                    <p>Empowering the next generation of Web3 innovators at Bharati Vidyapeeth College of Engineering</p>
+                </div>
+                <div class="footer-contact">
+                    <p><i class="fas fa-envelope"></i> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bloticbvducoep@gmail.com" target="_blank" style="color: inherit; text-decoration: none;">bloticbvducoep@gmail.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/PRmt1VCg2tH5DcnlwA21JS" target="_blank" style="color: inherit; text-decoration: none;">Bharati Vidyapeeth Campus, Dhankawadi Pune, Maharashtra</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-section links-section">
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-use.html">Terms of Use</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/blotic_bvducoep?igsh=Z25lNWZvNTBmaWN1" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/blotic/posts/?feedView=all" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://chat.whatsapp.com/D1QbpsJZuV1CscnlwA21JS" target="_blank" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 BLOTIC - Bharati Vidyapeeth's Premier Blockchain & Web3 Club. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- React and ReactDOM -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@motionone/react@10.16.2/dist/motion.dev.js"></script>
+    
+    <!-- Babel for JSX transformation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- Stepper Component -->
+    <script src="../components/Stepper.js"></script>
+    
+    <!-- Registration Form with Stepper -->
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+        const { motion, AnimatePresence } = Motion;
+        
+        // Step 1 Component - Basic Info
+        function Step1({ formData, setFormData, errors, setErrors }) {
+            const handleChange = (e) => {
+                const { name, value } = e.target;
+                setFormData(prev => ({ ...prev, [name]: value }));
+                
+                // Clear error when user starts typing
+                if (errors[name]) {
+                    setErrors(prev => ({ ...prev, [name]: '' }));
+                }
+            };
+            
+            // Real-time validation
+            useEffect(() => {
+                const newErrors = {};
+                
+                if (formData.fullName && formData.fullName.length < 2) {
+                    newErrors.fullName = 'Full name must be at least 2 characters';
+                }
+                
+                if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+                    newErrors.email = 'Please enter a valid email address';
+                }
+                
+                if (formData.password && formData.password.length < 8) {
+                    newErrors.password = 'Password must be at least 8 characters';
+                }
+                
+                if (formData.confirmPassword && formData.password !== formData.confirmPassword) {
+                    newErrors.confirmPassword = 'Passwords do not match';
+                }
+                
+                setErrors(prev => ({ ...prev, ...newErrors }));
+            }, [formData]);
+            
+            return (
+                <div className="step-default">
+                    <div className="form-grid">
+                        <div className="form-group full-width">
+                            <label htmlFor="fullName">Full Name *</label>
+                            <input 
+                                type="text" 
+                                id="fullName" 
+                                name="fullName" 
+                                value={formData.fullName || ''} 
+                                onChange={handleChange} 
+                                required 
+                                placeholder="Enter your full name"
+                            />
+                            {errors.fullName && <span className="error-message">{errors.fullName}</span>}
+                        </div>
+
+                        <div className="form-group full-width">
+                            <label htmlFor="email">Email Address *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                value={formData.email || ''} 
+                                onChange={handleChange} 
+                                required 
+                                placeholder="Enter your email address"
+                            />
+                            {errors.email && <span className="error-message">{errors.email}</span>}
+                        </div>
+
+                        <div className="form-group full-width">
+                            <label htmlFor="password">Password *</label>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                value={formData.password || ''} 
+                                onChange={handleChange} 
+                                required 
+                                placeholder="Create a strong password"
+                            />
+                            {errors.password && <span className="error-message">{errors.password}</span>}
+                        </div>
+
+                        <div className="form-group full-width">
+                            <label htmlFor="confirmPassword">Confirm Password *</label>
+                            <input 
+                                type="password" 
+                                id="confirmPassword" 
+                                name="confirmPassword" 
+                                value={formData.confirmPassword || ''} 
+                                onChange={handleChange} 
+                                required 
+                                placeholder="Confirm your password"
+                            />
+                            {errors.confirmPassword && <span className="error-message">{errors.confirmPassword}</span>}
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+        
+        // Step 2 Component - Additional Info
+        function Step2({ formData, setFormData, errors, setErrors }) {
+            const handleChange = (e) => {
+                const { name, value, type, checked } = e.target;
+                if (type === 'checkbox') {
+                    setFormData(prev => {
+                        const domains = prev.domains || [];
+                        if (checked) {
+                            return { ...prev, domains: [...domains, value] };
+                        } else {
+                            return { ...prev, domains: domains.filter(d => d !== value) };
+                        }
+                    });
+                } else {
+                    setFormData(prev => ({ ...prev, [name]: value }));
+                }
+                
+                // Clear error when user starts typing
+                if (errors[name]) {
+                    setErrors(prev => ({ ...prev, [name]: '' }));
+                }
+            };
+            
+            // Domain options
+            const domainOptions = [
+                'Marketing', 'Com-rel / PR', 'Dev-rel', 'Social Media', 
+                'Event Management', 'Designing', 'Content', 'Creativity', 'Research'
+            ];
+            
+            return (
+                <div className="step-default">
+                    <div className="form-grid">
+                        <div className="form-group">
+                            <label htmlFor="branch">Branch / Department *</label>
+                            <select 
+                                id="branch" 
+                                name="branch" 
+                                value={formData.branch || ''} 
+                                onChange={handleChange} 
+                                required
+                            >
+                                <option value="">Select Branch</option>
+                                <option value="CSE">CSE</option>
+                                <option value="CSBS">CSBS</option>
+                                <option value="CE">CE</option>
+                                <option value="IT">IT</option>
+                                <option value="ROBOTICS">ROBOTICS</option>
+                                <option value="ECE">ECE</option>
+                                <option value="E&TC">E&TC</option>
+                                <option value="E&CE">E&CE</option>
+                                <option value="MECHANICAL">MECHANICAL</option>
+                                <option value="CHEMICAL">CHEMICAL</option>
+                                <option value="CIVIL">CIVIL</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            {errors.branch && <span className="error-message">{errors.branch}</span>}
+                        </div>
+
+                        <div className="form-group">
+                            <label htmlFor="year">Year / Batch *</label>
+                            <select 
+                                id="year" 
+                                name="year" 
+                                value={formData.year || ''} 
+                                onChange={handleChange} 
+                                required
+                            >
+                                <option value="">Select Year</option>
+                                <option value="1">First Year</option>
+                                <option value="2">Second Year</option>
+                                <option value="3">Third Year</option>
+                                <option value="4">Fourth Year</option>
+                                <option value="Alumni">Alumni</option>
+                                <option value="Faculty">Faculty</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            {errors.year && <span className="error-message">{errors.year}</span>}
+                        </div>
+
+                        <div className="form-group full-width">
+                            <label>Domain(s) of Interest / Skill Area *</label>
+                            <div className="checkbox-group">
+                                {domainOptions.map(domain => (
+                                    <label className="checkbox-label" key={domain}>
+                                        <input 
+                                            type="checkbox" 
+                                            name="domains" 
+                                            value={domain}
+                                            checked={(formData.domains || []).includes(domain)}
+                                            onChange={handleChange}
+                                        />
+                                        <span className="checkmark"></span>
+                                        {domain}
+                                    </label>
+                                ))}
+                            </div>
+                            {errors.domains && <span className="error-message">{errors.domains}</span>}
+                        </div>
+
+                        <div className="form-group full-width">
+                            <label htmlFor="experience">Previous Experience (optional)</label>
+                            <textarea 
+                                id="experience" 
+                                name="experience" 
+                                value={formData.experience || ''} 
+                                onChange={handleChange} 
+                                rows="4" 
+                                placeholder="Tell us about your previous experience, projects, or skills..."
+                            ></textarea>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+        
+        // Success Component
+        function SuccessMessage() {
+            return (
+                <div className="step-default">
+                    <div className="success-message show">
+                        <h3>🎉 Registration Successful!</h3>
+                        <p>Welcome to BLOTIC! Your registration has been submitted successfully.</p>
+                        <p>You will receive a confirmation email shortly with next steps.</p>
+                    </div>
+                </div>
+            );
+        }
+        
+        // Registration Stepper Component
+        function RegistrationStepper() {
+            const [currentStep, setCurrentStep] = useState(1);
+            const [formData, setFormData] = useState({});
+            const [errors, setErrors] = useState({});
+            const [isSubmitting, setIsSubmitting] = useState(false);
+            const [isSuccess, setIsSuccess] = useState(false);
+            
+            const validateStep = (step) => {
+                const newErrors = {};
+                
+                if (step === 1) {
+                    if (!formData.fullName) {
+                        newErrors.fullName = 'Full name is required';
+                    } else if (formData.fullName.length < 2) {
+                        newErrors.fullName = 'Full name must be at least 2 characters';
+                    }
+                    
+                    if (!formData.email) {
+                        newErrors.email = 'Email is required';
+                    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+                        newErrors.email = 'Please enter a valid email address';
+                    }
+                    
+                    if (!formData.password) {
+                        newErrors.password = 'Password is required';
+                    } else if (formData.password.length < 8) {
+                        newErrors.password = 'Password must be at least 8 characters';
+                    }
+                    
+                    if (!formData.confirmPassword) {
+                        newErrors.confirmPassword = 'Please confirm your password';
+                    } else if (formData.password !== formData.confirmPassword) {
+                        newErrors.confirmPassword = 'Passwords do not match';
+                    }
+                } else if (step === 2) {
+                    if (!formData.branch) {
+                        newErrors.branch = 'Branch is required';
+                    }
+                    
+                    if (!formData.year) {
+                        newErrors.year = 'Year is required';
+                    }
+                    
+                    if (!formData.domains || formData.domains.length === 0) {
+                        newErrors.domains = 'Please select at least one domain of interest';
+                    }
+                }
+                
+                setErrors(newErrors);
+                return Object.keys(newErrors).length === 0;
+            };
+            
+            const handleStepChange = (newStep) => {
+                if (newStep > currentStep) {
+                    // Moving forward - validate current step
+                    if (validateStep(currentStep)) {
+                        setCurrentStep(newStep);
+                    }
+                } else {
+                    // Moving backward - no validation needed
+                    setCurrentStep(newStep);
+                }
+            };
+            
+            const handleSubmit = async () => {
+                if (!validateStep(2)) return;
+                
+                setIsSubmitting(true);
+                
+                try {
+                    // Prepare data for submission
+                    const submissionData = {
+                        fullName: formData.fullName,
+                        email: formData.email,
+                        phoneNumber: formData.phone,
+                        password: formData.password,
+                        branch: formData.branch,
+                        year: formData.year,
+                        domains: formData.domains,
+                        experience: formData.experience || ''
+                    };
+                    
+                    // Submit to backend
+                    const response = await fetch('/api/auth/register', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(submissionData)
+                    });
+                    
+                    if (response.ok) {
+                        setIsSuccess(true);
+                        // Reset form
+                        setFormData({});
+                        setErrors({});
+                    } else {
+                        const errorData = await response.json();
+                        alert(errorData.message || 'Registration failed. Please try again.');
+                    }
+                } catch (error) {
+                    console.error('Registration error:', error);
+                    alert('Registration failed. Please try again later.');
+                } finally {
+                    setIsSubmitting(false);
+                }
+            };
+            
+            if (isSuccess) {
+                return <SuccessMessage />;
+            }
+            
+            return (
+                <Stepper
+                    currentStep={currentStep}
+                    onStepChange={handleStepChange}
+                    onFinalStepCompleted={handleSubmit}
+                    nextButtonText={currentStep === 2 ? (isSubmitting ? 'Submitting...' : 'Complete') : 'Continue'}
+                    nextButtonProps={{ disabled: isSubmitting }}
+                >
+                    <Step>
+                        <Step1 
+                            formData={formData} 
+                            setFormData={setFormData} 
+                            errors={errors} 
+                            setErrors={setErrors} 
+                        />
+                    </Step>
+                    <Step>
+                        <Step2 
+                            formData={formData} 
+                            setFormData={setFormData} 
+                            errors={errors} 
+                            setErrors={setErrors} 
+                        />
+                    </Step>
+                </Stepper>
+            );
+        }
+        
+        // Render the stepper
+        const root = ReactDOM.createRoot(document.getElementById('stepper-container'));
+        root.render(<RegistrationStepper />);
+    </script>
+
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/particles.js"></script>
+    <script src="../scripts/app.js"></script>
+</body>
+</html>
